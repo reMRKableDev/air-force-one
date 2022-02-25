@@ -2,9 +2,13 @@
 
 /* ROOT STYLE ELEMENTS */
 :root {
-  --primary-clr: #000;
-  --secondary-clr: #fff;
-  --accent-clr: #333;
+  --brand-red: #f64e28;
+  --brand-maroon: #9f0101;
+  --brand-gold: #f8bd23;
+  --brand-blue: #5ad2cd;
+
+  --brand-black: #000;
+  --brand-white: #fff;
 }
 
 /* STANDARD BOX-SIZING */
