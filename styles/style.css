@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+
+/* ROOT STYLE ELEMENTS */
+:root {
+  --primary-clr: #000;
+  --secondary-clr: #fff;
+  --accent-clr: #333;
+}
+
+/* STANDARD BOX-SIZING */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* STANDARD STYLES FOR ELEMENTS */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Dela Gothic One", cursive;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-clr);
+}
+
+p,
+a,
+span {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* USE FLEXBOX TO KEEP FOOTER AT THE BOTTOM */
+.site-body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+/* LOGO */
+header a img {
+  width: 150px;
+  height: auto;
+}
+
+/* MEDIA QUERIES BREAKPOINTS */
+@media screen and (min-width: 768px) {
+  /* LOGO */
+  header a img {
+    width: 100px;
+    height: auto;
+  }
+}
