@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 /* ROOT STYLE ELEMENTS */
 :root {
@@ -37,15 +38,24 @@ h6 {
   font-family: "Dela Gothic One", cursive;
 }
 
+h1 {
+  font-size: 26px;
+}
+
+h2,
+h3 {
+  font-size: 20px;
+}
 a {
   text-decoration: none;
-  color: var(--primary-clr);
+  color: var(--brand-black);
 }
 
 p,
 a,
 span {
   font-family: "Montserrat", sans-serif;
+  font-size: 14px;
 }
 
 /* USE FLEXBOX TO KEEP FOOTER AT THE BOTTOM */
@@ -59,17 +69,168 @@ span {
   flex: 1;
 }
 
+header {
+  text-align: center;
+  border-bottom: 2px solid var(--brand-maroon);
+}
+
 /* LOGO */
 header a img {
-  width: 150px;
+  width: 50px;
   height: auto;
+}
+
+/* HERO SECTION */
+.hero-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 80vh;
+}
+
+.hero-item {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-item:nth-child(1) h1,
+.hero-item:nth-child(1) p {
+  margin: 0;
+}
+
+.hero-item:nth-child(1) h1,
+.hero-item:nth-child(1) p {
+  margin-bottom: 15px;
+}
+
+.hero-item:nth-child(1) a {
+  border: 1.5px solid var(--brand-red);
+  border-radius: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  background-color: var(--brand-red);
+  color: var(--brand-white);
+}
+
+.hero-item:nth-child(2) img {
+  width: 200px;
+  height: auto;
+}
+
+/* DETAILS SECTION */
+.details-container {
+  background-color: var(--brand-maroon);
+  color: var(--brand-white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 16px 0;
+}
+
+.details-item {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-item:nth-child(4),
+.details-item:nth-child(5) {
+  grid-column: span 2;
+}
+
+.details-item img {
+  width: 80%;
+  height: auto;
+}
+
+.details-item:nth-child(4) img,
+.details-item:nth-child(5) img {
+  width: 90%;
+  height: auto;
+}
+
+.details-item:nth-child(1) h2,
+.details-item:nth-child(1) p,
+.details-item:nth-child(3) h3,
+.details-item:nth-child(3) p {
+  margin: 0;
+}
+
+.details-item:nth-child(1) h2,
+.details-item:nth-child(1) p,
+.details-item:nth-child(3) h3,
+.details-item:nth-child(3) p {
+  margin-bottom: 15px;
+}
+
+/* BUY CONTAINER */
+.buy-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.buy-item {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.buy-item img {
+  width: 80%;
+  height: auto;
+}
+
+.buy-item:nth-child(3) a {
+  border: 1.5px solid var(--brand-red);
+  border-radius: 25px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  background-color: var(--brand-red);
+  color: var(--brand-white);
 }
 
 /* MEDIA QUERIES BREAKPOINTS */
 @media screen and (min-width: 768px) {
-  /* LOGO */
-  header a img {
-    width: 100px;
+  .hero-item {
+    grid-column: span 1;
+  }
+
+  .hero-item:nth-child(2) img {
+    width: 350px;
     height: auto;
+  }
+
+  .details-item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .details-item:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .details-item:nth-child(4),
+  .details-item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .details-item:nth-child(2) img {
+    width: 60%;
+    height: auto;
+  }
+
+  .details-item:nth-child(4) img,
+  .details-item:nth-child(5) img {
+    width: 80%;
+    height: auto;
+  }
+
+  .buy-item:nth-child(2),
+  .buy-item:nth-child(3) {
+    grid-column: span 1;
   }
 }
