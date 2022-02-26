@@ -121,7 +121,7 @@ header a img {
 }
 
 .hero-item:nth-child(2) img {
-  width: 200px;
+  width: 50%;
   height: auto;
 }
 
@@ -176,6 +176,7 @@ header a img {
 .buy-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding: 16px 0;
 }
 
 .buy-item {
